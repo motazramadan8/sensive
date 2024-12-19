@@ -56,7 +56,10 @@
                                           <a class="nav-link" href="blog-details.html">My Blogs</a>
                                       </li>
                                       <li class="nav-item">
-                                          <a class="nav-link" href="blog-details.html">Logout</a>
+                                          <form action={{ route('logout') }} method="post">
+                                              @csrf
+                                              <a class="nav-link" href="javascript:$('form').submit()">Logout</a>
+                                          </form>
                                       </li>
                                   </ul>
                               </li>
